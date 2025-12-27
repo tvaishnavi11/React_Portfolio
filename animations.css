@@ -1,0 +1,18 @@
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+/* Center all main sections */
+section {
+  min-height: 100vh; /* full viewport height */
+  display: flex;
+  align-items: center; /* vertical center */
+}
+
+/* Keep Bootstrap container behavior intact */
+section > .container {
+  width: 100%;
+}
