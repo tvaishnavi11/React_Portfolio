@@ -8,6 +8,29 @@ const roles = [
   "Building Modern Web Apps 🚀",
 ];
 
+const socials = [
+  {
+    name: "LinkedIn",
+    icon: "fab fa-linkedin-in",
+    link: "https://www.linkedin.com/in/vaishnavi-thakare-349284326",
+  },
+  {
+    name: "GitHub",
+    icon: "fab fa-github",
+    link: "https://github.com/tvaishnavi11",
+  },
+  {
+    name: "Twitter",
+    icon: "fab fa-twitter",
+    link: "https://twitter.com",
+  },
+  {
+    name: "Instagram",
+    icon: "fab fa-instagram",
+    link: "https://instagram.com",
+  },
+];
+
 const Hero = () => {
   const [text, setText] = useState("");
   const [i, setI] = useState(0);
@@ -42,7 +65,6 @@ const Hero = () => {
       id="home"
       className="hero-section min-vh-100 d-flex align-items-center position-relative overflow-hidden"
     >
-      {/* Animated background */}
       <div className="animated-bg position-absolute w-100 h-100"></div>
 
       <div className="container position-relative">
@@ -52,7 +74,7 @@ const Hero = () => {
             className="col-lg-6"
             initial={{ opacity: 0, x: -80 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.9, ease: "easeOut" }}
+            transition={{ duration: 0.9 }}
           >
             <h1 className="fw-bold display-5 mb-3">
               Hi, I’m <span className="text-gradient">Vaishnavi Thakare</span>
@@ -75,39 +97,34 @@ const Hero = () => {
               </a>
             </motion.div>
 
-            {/* SOCIALS */}
+            {/* SOCIAL ICONS */}
             <motion.ul
-              className="social-icons d-flex gap-3 justify-content-center justify-content-lg-start p-0 m-0"
+              className="d-flex gap-3 p-0 m-0 list-unstyled justify-content-center justify-content-lg-start"
               initial="hidden"
               animate="visible"
               variants={{
                 visible: {
-                  transition: { staggerChildren: 0.1 },
+                  transition: { staggerChildren: 0.15 },
                 },
               }}
             >
-              {[
-                ["linkedin", "fab fa-linkedin", "https://linkedin.com"],
-                ["github", "fab fa-github", "https://github.com/tvaishnavi11"],
-                ["twitter", "fab fa-twitter", "https://twitter.com"],
-                ["instagram", "fab fa-instagram", "https://instagram.com"],
-              ].map(([cls, icon, link]) => (
+              {socials.map((social) => (
                 <motion.li
-                  key={cls}
+                  key={social.name}
                   variants={{
                     hidden: { opacity: 0, y: 20 },
                     visible: { opacity: 1, y: 0 },
                   }}
-                  whileHover={{ y: -5, scale: 1.1 }}
-                  className="list-unstyled"
+                  whileHover={{ y: -6, scale: 1.15 }}
                 >
                   <a
-                    href={link}
+                    href={social.link}
                     target="_blank"
                     rel="noreferrer"
-                    className={`social ${cls}`}
+                    aria-label={social.name}
+                    className="social-icon"
                   >
-                    <i className={icon}></i>
+                    <i className={social.icon}></i>
                   </a>
                 </motion.li>
               ))}
@@ -122,14 +139,13 @@ const Hero = () => {
             transition={{ duration: 0.9 }}
           >
             <motion.div
-              className="hero-img-wrapper"
               animate={{ y: [0, -15, 0] }}
-              transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+              transition={{ repeat: Infinity, duration: 4 }}
             >
               <img
                 src="/download.jpg"
                 alt="profile"
-                className="img-fluid hero-img rounded-circle shadow-lg"
+                className="img-fluid rounded-circle shadow-lg"
                 width="320"
               />
             </motion.div>

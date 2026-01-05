@@ -2,45 +2,26 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    title: "Portfolio Website",
-    img: "https://via.placeholder.com/400x220",
-    desc: "Personal responsive portfolio built using Bootstrap 5.",
-    tech: ["Bootstrap", "JavaScript"],
-    link: "#",
-  },
-  {
     title: "Modern E-commerce Shop Platform",
     img: "Screenshot (915).png",
     desc: "Full-stack e-commerce platform with cart and authentication.",
     tech: ["React", "JavaScript", "Bootstrap"],
     link: "https://shoping-platform.vercel.app/",
   },
+
   {
-    title: "Student Dashboard",
-    img: "/Screenshot (896).png",
-    desc: "Responsive student dashboard with charts and analytics.",
-    tech: ["CRUDS", "React.js"],
-    link: "https://frontend-project-lemon-mu.vercel.app/",
+    title: "ParkSmart Management System",
+    img: "/parksamrt.png",
+    desc: "Park our car as per Location",
+    tech: [" React.js, JSON Server ,Tailwind CSS  "],
+    link: "https://parkingproject-nu.vercel.app/",
   },
+
   {
-    title: "Business Solution",
-    img: "/Screenshot (894).png",
-    desc: "Blog website with CRUD operations and authentication.",
-    tech: ["Node", "MongoDB", "EJS"],
-    link: "#",
-  },
-  {
-    title: "Solo Trip Traveling",
-    img: "/Screenshot (893).png",
-    desc: "Real-time management of solo travellers.",
-    tech: ["HTML", "Bootstrap", "JavaScript"],
-    link: "file:///C:/HTML/Solo.html",
-  },
-  {
-    title: "Smart Parking System",
+    title: "Slot Booking Management",
     img: "/car.jpg",
-    desc: "Smart parking management system using React & Maps.",
-    tech: ["React", "Maps API", "IoT"],
+    desc: "Smart parking management system using React .",
+    tech: ["React", "Maps API", "telwind"],
     link: "https://smart-car-parking-managment-system.vercel.app/",
   },
 ];

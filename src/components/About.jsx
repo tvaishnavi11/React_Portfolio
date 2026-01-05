@@ -72,7 +72,7 @@ const About = () => {
                   transition={{ repeat: Infinity, duration: 4 }}
                 >
                   <img
-                    src="/vt.JPG"
+                    src="/MY OHOTO.png"
                     alt="profile"
                     className="img-fluid rounded-circle about-img"
                     width="200"
@@ -100,9 +100,8 @@ const About = () => {
                 {/* STATS */}
                 <div className="row text-center g-4 mb-4">
                   {[
-                    ["Projects", 10],
+                    ["Projects", 5],
                     ["Technologies", 10],
-                    ["Months Experience", 10],
                   ].map(([label, value], i) => (
                     <div className="col-4" key={label}>
                       <h3
